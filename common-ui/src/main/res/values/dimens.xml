@@ -37,4 +37,7 @@
     <dimen name="sticky_header_elevation">6dp</dimen>
     <dimen name="fast_scroller_radius">6dp</dimen>
 
+    <dimen name="list_vertical_padding">@dimen/spacing_small</dimen>
+    <dimen name="list_horizontal_padding">@dimen/spacing_normal</dimen>
+
 </resources>

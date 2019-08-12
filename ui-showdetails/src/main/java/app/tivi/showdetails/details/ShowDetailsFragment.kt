@@ -33,6 +33,7 @@ import app.tivi.extensions.updateConstraintSets
 import app.tivi.showdetails.ShowDetailsNavigator
 import app.tivi.ui.TransitionListenerAdapter
 import app.tivi.TiviMvRxFragment
+import app.tivi.common.epoxy.StickyHeaderScrollListener
 import app.tivi.showdetails.details.databinding.FragmentShowDetailsBinding
 import com.airbnb.mvrx.MvRx
 import com.airbnb.mvrx.fragmentViewModel
@@ -99,6 +100,11 @@ class ShowDetailsFragment : TiviMvRxFragment() {
                 }
             }
         })
+
+        binding.detailsRv.apply {
+            addOnScrollListener(StickyHeaderScrollListener(controller,
+                    controller::isHeader, binding.detailsHeaderHolder))
+        }
 
         binding.detailsFollowFab.setOnClickListener {
             viewModel.onToggleMyShowsButtonClicked()

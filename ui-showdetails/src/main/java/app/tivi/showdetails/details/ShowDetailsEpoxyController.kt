@@ -35,10 +35,12 @@ import app.tivi.common.epoxy.carousel
 import app.tivi.common.layouts.detailsBadge
 import app.tivi.common.layouts.detailsHeader
 import app.tivi.common.epoxy.withModelsFrom
+import app.tivi.common.layouts.DetailsHeaderBindingModel_
 import app.tivi.ui.widget.PopupMenuButton
 import com.airbnb.epoxy.Carousel
 import com.airbnb.epoxy.TypedEpoxyController
 import app.tivi.showdetails.details.databinding.ViewHolderDetailsSeasonBinding
+import com.airbnb.epoxy.EpoxyModel
 import com.airbnb.mvrx.Async
 import com.airbnb.mvrx.Success
 import javax.inject.Inject
@@ -294,5 +296,9 @@ class ShowDetailsEpoxyController @Inject constructor(
             }
             return true
         }
+    }
+
+    fun isHeader(model: EpoxyModel<*>): Boolean {
+        return model is DetailsHeaderBindingModel_
     }
 }
