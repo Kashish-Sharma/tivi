@@ -22,6 +22,7 @@
             <option value="$PROJECT_DIR$/data" />
             <option value="$PROJECT_DIR$/data-android" />
             <option value="$PROJECT_DIR$/domain" />
+            <option value="$PROJECT_DIR$/presenter-episodedetails" />
             <option value="$PROJECT_DIR$/tasks" />
             <option value="$PROJECT_DIR$/tmdb" />
             <option value="$PROJECT_DIR$/trakt" />
